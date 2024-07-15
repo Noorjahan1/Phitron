@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{  stack<int>st;
+   stack<int>st2;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int x;
+        cin>>x;
+        st.push(x);
+    }
+    for(int i=0;i<n;i++){
+        st2.push(st.top());
+        st.pop();
+    }
+    int k;
+    cin>>k;
+    for(int i=1;i<st2.size();i++){
+        if(i==k){
+            cout<<st2.top();
+            break;
+        }
+        st2.pop();
+
+    }
+    return 0;
+}
+
