@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{  int q;
+   cin>>q;
+   vector<int>arr;
+   while(q){
+        int x;
+         cin>>x;
+         if(x==1){
+            int val1;
+            cin>>val1;
+            if(arr.empty()){
+            arr.push_back(val1);
+            }else{
+                arr.insert(arr.begin()+1,val1);
+            }
+         }
+         if(x==2){
+            int val2;
+            cin>>val2;
+            if(arr.empty()){
+                arr.push_back(val2);
+            }else{
+                arr.insert(arr.begin()+(arr.size()-1),val2);
+            }
+         }
+
+         q--;
+
+   }
+   for(int i=0;i<arr.size();i++){
+            cout<<arr[i]<<" ";
+         }
+
+    return 0;
+}
+
